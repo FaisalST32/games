@@ -1,0 +1,205 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 12px;
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(background.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+.container{
+    width: 80%;
+    margin: 10vh auto;
+    text-align: center;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    min-height: 80vh;
+}
+
+div.row>.tile>.tile-hidden {
+    display: none;
+}
+
+#mines-counter{
+    display: inline-block;
+    margin: 20px 40px;
+    font-size: 30px;
+    color: white;
+    vertical-align: middle;
+}
+
+#mines-counter>.counterText, .timer>.minutes, .timer>.seconds{
+
+    vertical-align: middle;
+}
+
+
+.container .mineImage{
+    width: 48px;
+    vertical-align: middle;
+}
+
+.container>.timer{
+    display: inline-block;
+    margin: 20px 40px;
+    font-size: 30px;
+    color: white;
+    vertical-align: middle;
+    
+}
+
+
+.container .clockImage{
+    width: 35px;
+    vertical-align: middle;
+}
+
+.container .smileyImage{
+    width: 60px;
+    vertical-align: middle;
+    padding-bottom: 9px;
+    margin: 0px 60px;
+    cursor: pointer;
+}
+
+
+div.row{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+div.row>.tile{
+    background-color: gray;
+
+}
+
+div.row>.tile>.tile-hidden, div.row>.tile>.tile-shown {
+    background-color: gray;
+    border: solid 2px white;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.row>.tile>.tile-hidden.mine {
+    background-color: orangered;
+
+}
+div.row>.tile>.tile-hidden {
+    vertical-align: middle;
+}
+
+div.row>.tile>.tile-shown:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+div.row>.tile>.tile-shown{
+    -webkit-appearance: button;
+    background-color: #adadad;
+}
+
+
+div.row>.tile>.tile-hidden.mine{
+    content: 'X';
+}
+
+div.row>.tile>.tile-hidden.mine-1{
+    background-color: greenyellow
+}
+div.row>.tile>.tile-hidden.mine-2{
+    background-color: rgb(234, 255, 47)
+}
+div.row>.tile>.tile-hidden.mine-3{
+    background-color: rgb(255, 206, 47)
+}
+div.row>.tile>.tile-hidden.mine-4{
+    background-color: rgb(255, 141, 47)
+}
+div.row>.tile>.tile-hidden.mine-5{
+    background-color: rgb(255, 95, 47)
+}
+div.row>.tile>.tile-hidden.mine-6{
+    background-color: rgb(255, 71, 47)
+}
+div.row>.tile>.tile-hidden.mine-7{
+    background-color: rgb(255, 47, 47);
+    color: white;
+}
+div.row>.tile>.tile-hidden.mine-8{
+    background-color: rgb(85, 47, 255);
+    color: white;
+}
+div.row>.tile>.tile-hidden.mine-0{
+    background-color: #e2dfdf;
+}
+
+div.row>.tile>.tile-shown.flag{
+    border-color: green;
+}
+div.row>.tile>.tile-shown.flag>img{
+    border-color: green;
+}
+
+
+.overlay{
+
+    position: fixed;
+    left: 0;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vw;
+    z-index: 10;
+    text-align: center;
+}
+.dialog-box{
+    position: fixed;
+    top: 20vh;
+    left: 35vw;
+    width: 30vw;
+    background-color: #4c0e0e;
+    color: #b9b9b9;
+    padding: 20px 0px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.difficulty-text{
+    font-size: 25px;
+    margin-bottom: 60px;
+}
+
+.dialog-box .btn-option{
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 100ms ease-in-out;
+    background-color: #b9b9b9;
+    color: #4c0e0e
+}
+
+.dialog-box .btn-option:hover{
+    background-color: rgba(0,255,0,0.3);
+    cursor: pointer;
+    color: white;
+}
+
+.dialog-box #dif-2.btn-option:hover{
+    background-color: rgba(255,0,0,0.3);
+
+}

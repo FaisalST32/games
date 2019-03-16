@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Faisal's Minesweeper</title>
+    <link rel="icon" href="flag.png">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="mines-counter">
+            <img class="mineImage" src="mine.png">: <span class="counterText">0</span>
+        </div>
+        <img class="smileyImage" onclick="onNewGame()" src="smiley.png" title="New Game">
+        <div class="timer">
+            <img class="clockImage" src="clock.png">&nbsp;<span class="minutes">00</span>:<span
+                class="seconds">00</span>
+        </div>
+    </div>
+
+    <div id="choose-difficulty-modal" class="overlay hideable">
+        <div class="dialog-box">
+            <div class="difficulty-text">
+                CHOOSE DIFFICULTY
+            </div>
+            <div>
+                <div id="dif-1" onclick="onChooseDifficulty(this)" class="btn-option">Normal</div>
+                <div id="dif-2" onclick="onChooseDifficulty(this)" class="btn-option">Hard</div>
+            </div>
+        </div>
+    </div>
+    <div id="game-result-modal" class="overlay hideable" style="visibility: hidden;">
+        <div class="dialog-box">
+            <div id="game-result-text" class="difficulty-text">
+                You Lost!!
+            </div>
+            <div>
+                <div onclick="onNewGame()" class="btn-option">New Game</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
