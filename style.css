@@ -1,0 +1,158 @@
+@font-face {
+    font-family: Lato;
+    src: url(Lato-Light.ttf);
+}
+
+body {
+    background-color: #353232;
+    color: rgba(255, 255, 255, 0.8);
+    ;
+}
+
+div,
+nav,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    height: 55px;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: center;
+    background-color: #251f1f;
+    width: 100vw;
+}
+
+.title {
+    font-size: 25px;
+    padding: 0 20px;
+
+}
+
+.nav-link {
+    flex-basis: 100px;
+}
+
+.nav-link a {
+
+    padding: 0 20px;
+    display: block;
+    line-height: 55px;
+    text-align: center;
+}
+
+.nav-link:hover {
+    background-color: dimgray;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+.transition {
+    transition: all 200ms ease-in-out
+}
+
+.container {
+    display: block;
+    width: 70vw;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.well {
+    display: inline-block;
+    padding: 20px;
+    background-color: #251f1f;
+    margin: 20px;
+    border-radius: 2px;
+}
+
+.well:hover.hoverwell {
+    background-color: #1b1616;
+    cursor: pointer;
+}
+
+
+.game-thumbnail {
+    width: 42%;
+}
+
+@media screen and (max-width: 1300px) {
+    .game-thumbnail {
+        width: 100%;
+    }
+}
+
+.avatar-image {
+    height: 100px;
+
+}
+
+.game-avatar {
+    display: inline-block;
+}
+
+.game-details {
+    display: inline-block;
+    margin-left: 40px;
+    vertical-align: top;
+    line-height: calc(100px/3);
+}
+
+.game-details>strong {
+    font-size: 1.2em;
+}
+
+.well .avi{
+    display: inline-block;
+
+}
+
+.about-well{
+    width: 100%
+}
+.avi img{
+    height: 400px;;
+}
+.about-text-div{
+    display: inline-block;
+    margin-left: 40px;
+    vertical-align: top;
+}
+.social-links img {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.about-text-div .social-links:hover img{
+    transform: scale(1.1, 1.1)
+}
+.about-text-div ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-text-div ul li{
+    margin: 16px 0;
+}
+
+.about-text-div .username{
+    visibility: hidden;
+    opacity: 0;
+}
+.about-text-div .social-links:hover .username{
+    visibility: visible;
+    opacity: 1;
+}

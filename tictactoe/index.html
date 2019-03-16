@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Faisal's TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    <div class='score'>
+        <div class="score-header">
+            Scores
+        </div>
+        <div class="player-scores X">
+            Player X: <span id="score-X">0</span>
+        </div>
+        <div class="player-scores O">
+            Player O: <span id="score-O">0</span>
+        </div>
+
+    </div>
+    <div class="container">
+
+        <h1 class="welcome-text">
+            Welcome to Faisal's Tic-Tac-Toe!
+        </h1>
+        <div class="filler"></div>
+        <div class="turn-indicator">
+            Player <span class="current-player">X</span>'s Turn
+        </div>
+        <div class="filler"></div>
+
+        <div>
+            <input class="box" readonly type="text" id="0-0">
+            <input class="box" readonly type="text" id="0-1">
+            <input class="box" readonly type="text" id="0-2">
+        </div>
+
+        <div>
+            <input class="box" readonly type="text" id="1-0">
+            <input class="box" readonly type="text" id="1-1">
+            <input class="box" readonly type="text" id="1-2">
+        </div>
+
+        <div>
+            <input class="box" readonly type="text" id="2-0">
+            <input class="box" readonly type="text" id="2-1">
+            <input class="box" readonly type="text" id="2-2">
+        </div>
+        <div class="button-wrapper">
+            <button id="new-game" class="okay-button">New Game</button>
+
+        </div>
+
+
+        <div class="winner-screen fade-out">
+            <div class="overlay">
+            </div>
+            <div class="message-box">
+                <div class="title">Game Over</div>
+                <div class="body">Player X Won!</div>
+                <button class="okay-button">New Game</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
