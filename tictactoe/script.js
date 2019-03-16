@@ -118,12 +118,7 @@ document.querySelectorAll('.okay-button').forEach((value, key) => {
 
 function newGame() {
     clearBoard();
-    // document.querySelector('.winner-screen').style.display = 'none';
-    document.querySelector('.winner-screen').classList.toggle('fade-in');
-    document.querySelector('.winner-screen').classList.toggle('fade-out');
-
+    document.querySelector('.winner-screen').classList.remove('fade-in');
+    document.querySelector('.winner-screen').classList.add('fade-out');
     switchPlayer();
 }
-
-document.querySelector('.winner-screen').classList.toggle('fade-in');
-document.querySelector('.winner-screen').classList.toggle('fade-out');
