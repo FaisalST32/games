@@ -127,5 +127,3 @@ function newGame() {
 
 document.querySelector('.winner-screen').classList.toggle('fade-in');
 document.querySelector('.winner-screen').classList.toggle('fade-out');
-
-Faisal, Dipanjan Das, "Ashutosh", Harish, Pritam, Prashant, Mudit, Rijath Mohammed, Faisal
