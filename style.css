@@ -61,11 +61,50 @@ a {
     transition: all 200ms ease-in-out
 }
 
-.container {
+/* .container {
     display: block;
     width: 70vw;
-    margin: auto;
-}
+    box-sizing: border-box;
+} */
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+  }
+  
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1360px;
+    }
+  }
 
 .text-center {
     text-align: center;
@@ -75,8 +114,9 @@ a {
     display: inline-block;
     padding: 20px;
     background-color: #251f1f;
-    margin: 20px;
     border-radius: 2px;
+    box-sizing: border-box;
+    
 }
 
 .well:hover.hoverwell {
@@ -86,12 +126,13 @@ a {
 
 
 .game-thumbnail {
-    width: 42%;
+    margin: 20px;
+    width: calc(50% - 42px);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 993px) {
     .game-thumbnail {
-        width: 100%;
+        width: calc(100% - 42px);
     }
 }
 
@@ -110,6 +151,12 @@ a {
     vertical-align: top;
     line-height: calc(100px/3);
 }
+@media screen and (max-width: 446px) {
+    .game-details {
+        margin-left: 0px;
+    }
+}
+
 
 .game-details>strong {
     font-size: 1.2em;
@@ -121,15 +168,29 @@ a {
 }
 
 .about-well{
-    width: 100%
+    width: 100%;
+    margin: 20px 0;
 }
 .avi img{
-    height: 400px;;
+    height: 400px;
+}
+
+@media screen and (max-width: 993px){
+    .avi img{
+        width: 100%;
+        height: auto;
+    }
 }
 .about-text-div{
     display: inline-block;
     margin-left: 40px;
     vertical-align: top;
+}
+@media screen and (max-width: 1200px){
+    .about-text-div{
+        margin-left: 0px;
+
+    }
 }
 .social-links img {
     height: 30px;
