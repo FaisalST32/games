@@ -254,7 +254,9 @@ button {
     .box{
         width: 30vw;
         height: 29vw;
+        transition: none;
     }
+
 
     .winner-screen .message-box {
         transform: scale(1.5, 1.5);
