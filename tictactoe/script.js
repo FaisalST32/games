@@ -193,13 +193,6 @@ function computerPlays() {
         nextBoxCoords = computeRandomMove();
     }
 
-    // else{
-
-    // var nextBoxCoords = currentTurn.pattern[turnCount];
-    // var nextBoxCoords = computeSavingMove();
-    // if (!nextBoxCoords)
-    //     nextBoxCoords = computeRandomMove();
-    // }
     var nextBox = document.querySelector(`[id='${nextBoxCoords}']`);
     onCheckBox(nextBox);
 }
@@ -274,14 +267,21 @@ function computeRandomMove() {
     var remainingMoves = getRemainingMoves();
     var movesTried = 0;
     var randomMove;
-    do{
+    while(true)
+    {
         console.log('Trying Random Move!');
         randomMove = remainingMoves[Math.floor(Math.random() * remainingMoves.length)];
+        remainingMoves = remainingMoves.filter(m => m != randomMove);
         movesTried++;
+        if(!isLosingMove(randomMove)){
+            console.log('Playing Calculated Random Move');
+            return randomMove;
+        }
+        else if (isLosingMove(randomMove) && movesTried != remainingMoves.length){
+            console.log('Playing Any Random Move');
+            return getRemainingMoves()[Math.floor(Math.random() * remainingMoves.length)];
+        }
     }
-    while(isLosingMove(randomMove) || movesTried != remainingMoves.length)
-    console.log('Playing Random Move');
-    return remainingMoves[Math.floor(Math.random() * remainingMoves.length)];
 }
 
 function isLosingCombination(combination) {
@@ -306,7 +306,7 @@ function computeSavingMove() {
     for (var move of remainingMoves) {
         checkedBoxes.push({ box: move, player: currentPlayer });
         var nextBox = document.querySelector(`[id='${move}']`)
-        if (checkWinner(true) == 'game over') {
+        if (checkWinner(true) == 'game over') { 
             savingMoveCoords = move;
             onUncheckBox(nextBox, true);
             break;
