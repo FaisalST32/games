@@ -24,7 +24,15 @@
     </div>
     <div class="container">
         <h1 class="welcome-text">
-            Welcome to Faisal's Tic-Tac-Toe!
+            Welcome to Faisal's Tic-Tac-Toe!<br>
+            <span class="mode-select">
+                <span class="mode PvC" onclick="onGameModeChange('PvC', this)">
+                    1 Player
+                </span>
+                <span onclick="onGameModeChange('PvP', this)" class="mode PvP mode-selected">
+                    2 Players
+                </span>
+            </span>
         </h1>
         <div class="filler"></div>
         <div class="turn-indicator">
@@ -62,6 +70,24 @@
         </div>
 
     </div>
+
+    <!-- Loader -->
+
+    <div class="loader-overlay">
+            <div class="lds-grid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 
