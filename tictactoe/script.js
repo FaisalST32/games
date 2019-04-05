@@ -362,7 +362,7 @@ function checkTrap(){
             winningMoveCount++
         checkedBoxes.pop();
     }
-    if(winningMoveCount > 1 && winningMoveCount < boxes.length){
+    if(winningMoveCount > 1){
         return 'trapped';
     }
     else{
