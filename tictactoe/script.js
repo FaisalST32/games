@@ -439,23 +439,24 @@ function checkTrap(){
 
 function computeRandomMove() {
     var remainingMoves = getRemainingMoves();
-    var movesTried = 0;
-    var randomMove;
-    while(true)
-    {
-        console.log('Trying Random Move!');
-        randomMove = remainingMoves[Math.floor(Math.random() * remainingMoves.length)];
-        remainingMoves = remainingMoves.filter(m => m != randomMove);
-        movesTried++;
-        if(!isLosingMove(randomMove)){
-            console.log('Playing Calculated Random Move');
-            return randomMove;
-        }
-        else if (isLosingMove(randomMove) && movesTried != remainingMoves.length){
-            console.log('Playing Any Random Move');
-            return getRemainingMoves()[Math.floor(Math.random() * remainingMoves.length)];
-        }
-    }
+    //var movesTried = 0;
+    return remainingMoves[Math.floor(Math.random()*remainingMoves.length)]
+    // var randomMove;
+    // while(true)
+    // {
+    //     console.log('Trying Random Move!');
+    //     randomMove = remainingMoves[Math.floor(Math.random() * remainingMoves.length)];
+    //     remainingMoves = remainingMoves.filter(m => m != randomMove);
+    //     movesTried++;
+    //     if(!isLosingMove(randomMove)){
+    //         console.log('Playing Calculated Random Move');
+    //         return randomMove;
+    //     }
+    //     else if (isLosingMove(randomMove) && movesTried != remainingMoves.length){
+    //         console.log('Playing Any Random Move');
+    //         return getRemainingMoves()[Math.floor(Math.random() * remainingMoves.length)];
+    //     }
+    // }
 }
 
 // function isLosingCombination(combination) {
