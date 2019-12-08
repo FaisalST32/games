@@ -138,11 +138,13 @@ a {
 
 .avatar-image {
     height: 100px;
-
+    width: 100%;
+    object-fit: cover;
 }
 
 .game-avatar {
     display: inline-block;
+    width: 150px;
 }
 
 .game-details {
